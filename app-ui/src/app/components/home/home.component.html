@@ -1,0 +1,21 @@
+<mat-grid-list cols="7" rowHeight="100vh">
+  <mat-grid-tile
+      [colspan]="1">
+      <app-left-panel></app-left-panel>
+  </mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="5">
+      <div class="container">
+        <div class="canvas">
+          <app-canvas></app-canvas>
+        </div>
+        <div class="console">
+          <app-console-logs></app-console-logs>
+        </div>
+      </div>
+  </mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="1">
+      <app-right-panel></app-right-panel>
+  </mat-grid-tile>
+</mat-grid-list>

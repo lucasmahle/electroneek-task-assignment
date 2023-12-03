@@ -1,0 +1,17 @@
+.container {
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+
+  .canvas {
+    height: 70vh;
+  }
+
+  .console {
+    height: 30vh;
+  }
+}
+
+::ng-deep .mat-grid-tile-content {
+  display: inherit !important;
+}
