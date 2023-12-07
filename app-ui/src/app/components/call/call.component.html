@@ -1,0 +1,20 @@
+<mat-grid-list cols="4" class="boxes" gutterSize="15px" rowHeight="4:1">
+  <mat-grid-tile [ngClass]="{ 'success': isCreationDone, 'error': hasError }" class="box">
+    <div>Creation</div>
+  </mat-grid-tile>
+
+  <mat-grid-tile [ngClass]="{ 'success': isSentDone, 'error': hasError }" class="box">
+    <div>Send</div>
+  </mat-grid-tile>
+
+  <mat-grid-tile [ngClass]="{ 'success': isProcessingDone, 'error': hasError }" class="box">
+    <div>{{ isSyncProcess ? 'Processing' : 'Waiting' }}</div>
+  </mat-grid-tile>
+
+  <mat-grid-tile 
+    [ngClass]="{ 'success': isCallDone, 'error': hasError }" 
+    [style.background-image]="isCallDone ? 'url(' + catImageUrl +')' : ''"
+    class="box">
+    <div>Done</div>
+  </mat-grid-tile>
+</mat-grid-list>

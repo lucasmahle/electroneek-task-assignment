@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ConsoleLogsComponent } from './components/console-logs/console-logs.component';
 
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { LeftPanelComponent } from './components/left-panel/left-panel.component';
 import { RightPanelComponent } from './components/right-panel/right-panel.component';
 import { CanvasComponent } from './components/canvas/canvas.component';
+import { MaterialImporterModule } from './material-importer/material-importer.module';
+import { CallOptionListComponent } from './components/call-option-list/call-option-list.component';
+import { CallComponent } from './components/call/call.component';
+import { CONFIG_TOKEN, Config } from './core/config/config';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -22,18 +24,24 @@ import { CanvasComponent } from './components/canvas/canvas.component';
     ConsoleLogsComponent,
     LeftPanelComponent,
     RightPanelComponent,
-    CanvasComponent
+    CanvasComponent,
+    CallOptionListComponent,
+    CallComponent
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule,
-    MatGridListModule,
-    MatCardModule,
-    MatDividerModule,
+    MaterialImporterModule,
     ScrollingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: CONFIG_TOKEN,
+      useValue: Config
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,22 @@
+.boxes {
+  padding-top: 25px;
+
+  .box {
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #8d8d8d;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+
+    &.success {
+      background-color: #448939;
+    }
+
+    &.error {
+      background-color: #893939;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeftPanelComponent } from './left-panel.component';
+import { LeftPanelComponent } from './LeftPanelComponent';
 
 describe('LeftPanelComponent', () => {
   let component: LeftPanelComponent;

@@ -1,14 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ApiGateway } from './gateways/api.gateway';
+import { CoreModule } from './core/core.module';
+import { HttpModule } from './infrastrucutre/http/http.module';
+import { WebSocketModule } from './infrastrucutre/web-socket/web-socket.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [
-    AppService,
-    ApiGateway,
-  ],
+  imports: [CoreModule, HttpModule, WebSocketModule],
+  controllers: []
 })
 export class AppModule {}

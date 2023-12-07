@@ -1,0 +1,1 @@
+export { ICat } from './cat'

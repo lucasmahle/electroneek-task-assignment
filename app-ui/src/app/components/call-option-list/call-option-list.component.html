@@ -1,0 +1,10 @@
+<mat-card-title>{{ title }}</mat-card-title>
+<mat-divider inset></mat-divider>
+<mat-card-subtitle>
+  {{ subtitle }}
+</mat-card-subtitle>
+<mat-card-content>
+  <div *ngFor="let option of options">
+    <button (click)="handleClick(option)" mat-stroked-button>{{ option.name }}</button>
+  </div>
+</mat-card-content>
